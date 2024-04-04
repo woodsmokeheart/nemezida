@@ -1,11 +1,12 @@
-import { TonConnectButton } from "@tonconnect/ui-react";
-import "./App.css";
+import ClientAddress from "./components/ClientAddress/ClientAddress";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
-    <>
-      <TonConnectButton />
-    </>
+    <main>
+      <Header />
+      <ClientAddress />
+    </main>
   );
 }
 
