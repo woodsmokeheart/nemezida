@@ -32,9 +32,9 @@ const ClientAddress = () => {
   }
   return (
     <div className={css.wrapper}>
-      <div className={css.title}>Address</div>
+      <div className={css.title}>My address</div>
       <div className={css.item}>{userFriendlyAddress}</div>
-      <div className={css.title}>DNS</div>
+      <div className={css.title}>My linked DNS</div>
       <div className={css.item}>
         {dns.map((domain, index) => (
           <div className={css.dns} key={index}>{domain}</div>
