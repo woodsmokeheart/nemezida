@@ -7,10 +7,9 @@ const ClientAddress = () => {
   const userFriendlyAddress = useTonAddress();
   const rawAddress = useTonAddress(false);
   const [dns, setDns] = useState([]);
-  console.log(dns, "dns1");
 
   useEffect(() => {
-    const fetchParsedNfts = async () => {
+    const fetchParsedDns = async () => {
       if (!rawAddress) return;
 
       try {
@@ -24,7 +23,7 @@ const ClientAddress = () => {
       }
     };
 
-    fetchParsedNfts();
+    fetchParsedDns();
   }, [rawAddress]);
 
   if (!userFriendlyAddress) {
@@ -37,7 +36,9 @@ const ClientAddress = () => {
       <div className={css.title}>My linked DNS</div>
       <div className={css.item}>
         {dns.map((domain, index) => (
-          <div className={css.dns} key={index}>{domain}</div>
+          <div className={css.dns} key={index}>
+            {domain}
+          </div>
         ))}
       </div>
     </div>
